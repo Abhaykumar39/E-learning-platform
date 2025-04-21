@@ -1,0 +1,137 @@
+.account-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    min-height: 70vh;
+  }
+  
+  .profile-card {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    padding: 32px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    opacity: 1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #4f46e5;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #4f46e5;
+    padding-bottom: 8px;
+  }
+  
+  .profile-details p {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f46e5;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-btn:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-btn {
+    background-color: #06b6d4;
+  }
+  
+  .admin-btn:hover {
+    background-color: #0ea5e9;
+  }
+  
+  .logout-btn {
+    background-color: #ef4444;
+  }
+  
+  .logout-btn:hover {
+    background-color: #dc2626;
+  }
+  
+  .profile-btn svg {
+    margin-right: 10px;
+    font-size: 1.3rem;
+  }
+  
+  /* Card Border Animation */
+  .profile-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .profile-card::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    z-index: -1;
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+  }
+  
+  .profile-card:hover::before {
+    opacity: 0.3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .profile-card {
+      padding: 24px;
+      max-width: 100%;
+    }
+  
+    .profile-title {
+      font-size: 1.5rem;
+    }
+  
+    .profile-btn {
+      font-size: 1rem;
+      padding: 10px 16px;
+    }
+  }
+  

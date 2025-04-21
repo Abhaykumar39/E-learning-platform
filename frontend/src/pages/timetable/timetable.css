@@ -1,0 +1,187 @@
+.timetable-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.timetable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.timetable th,
+.timetable td {
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+}
+
+.timetable th {
+  background-color: #4a90e2;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.timetable td {
+  min-height: 90px;
+  height: 90px;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.timetable td:hover {
+  background-color: #f1f1f1;
+}
+
+.timetable td div {
+  background-color: inherit;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.timetable td div:hover {
+  transform: scale(1.03);
+}
+
+.timetable td div strong {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.delete-btn {
+  background-color: rgba(255, 0, 0, 0.8);
+  border: none;
+  padding: 4px 10px;
+  color: #ea082a;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+/* Form Styling */
+.add-subject-form {
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.add-subject-form h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-subject-form input,
+.add-subject-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.add-subject-form input:focus,
+.add-subject-form select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.add-subject-form input[type="color"] {
+  width: 60px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-subject-form button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.add-subject-form button:hover {
+  background-color: #218838;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  width: 100%;
+}
+
+/* Mobile & Tablet Responsive */
+@media (max-width: 768px) {
+  .timetable-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .timetable th,
+  .timetable td {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  .timetable td div {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  .add-subject-form h3 {
+    font-size: 1.4rem;
+  }
+
+  .add-subject-form input,
+  .add-subject-form select,
+  .add-subject-form button {
+    font-size: 0.9rem;
+  }
+}

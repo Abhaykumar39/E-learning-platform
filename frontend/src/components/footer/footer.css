@@ -1,0 +1,77 @@
+footer {
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #6dd5ed, #2193b0);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-size: 400% 400%; /* To create a smooth shifting effect for the gradient */
+  animation: gradientShift 10s ease infinite; /* Animation for gradient shift */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0e0e0; /* Softer grey text for a cleaner, modern look */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 22px;
+  transition: all 0.3s ease;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle transparent background */
+  display: inline-block;
+  cursor: pointer;
+  transform: scale(1);
+  animation: scaleEffect 0.5s ease-in-out infinite alternate; /* Animated scale effect */
+}
+
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.social-links a:hover {
+  color: #ffb6b9; /* Soft pinkish hue on hover */
+  transform: scale(1.3); /* Slightly larger scale on hover */
+  background-color: rgba(255, 255, 255, 0.3); /* Slight increase in transparency on hover */
+}
